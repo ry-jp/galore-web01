@@ -1,8 +1,30 @@
-query Products {
-  products {
-    id
-    title
-    image
-    description
+query Products{
+  products{
+    data{
+      id
+      attributes{
+        title
+        description
+        price
+        image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        custom_field{
+          title
+          required
+          options
+          small
+          medium
+          large
+          XL
+          twoXL
+          threeXL
+        }
+      }
+    }
   }
 }
